@@ -1,3 +1,5 @@
+//* node-graphql/src/schema.js
+
 const { gql } = require('apollo-server')
 
 const typeDefs = gql`
@@ -21,6 +23,4 @@ const typeDefs = gql`
     enroll(id: ID!): Student
   }
 `
-module.exports = {
-    typeDefs,
-}
+module.exports = typeDefs

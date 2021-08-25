@@ -7,6 +7,6 @@ const server = new ApolloServer({
     typeDefs: typeDefs
 });
 
-server.listen({ PORT }, () => {
+server.listen(PORT, () => {
     console.log('listening on port' + PORT);
 });

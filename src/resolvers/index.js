@@ -1,6 +1,7 @@
-const { students } = require("../Meta/data");
+const { students } = require('../Meta/data.js');
 
 const resolvers = {
+
     Student: {
         id: (parent, args, context, info) => parent.id,
         email: (parent) => parent.email,
@@ -8,14 +9,16 @@ const resolvers = {
         dept: (parent) => parent.dept,
         enrolled: (parent) => parent.enrolled,
     },
+
     Query: {
         enrollment: (parent, args) => {
-            return students.filter((student) => student.enrolled);
+            return students.filter((student) => student.enrolled)
         },
         student: (parent, args) => {
             return students.find((student) => student.id === Number(args.id))
-        }
+        },
     },
+
     Mutation: {
         registerStudent: (parent, args) => {
             students.push({
@@ -25,13 +28,18 @@ const resolvers = {
                 dept: args.dept,
                 enrolled: false,
             })
+            return students[students.length - 1]
         },
         enroll: (parent, args) => {
-            const studentToEnroll = students.find((student) => student.id === Number(args.id));
-            studentToEnroll.enrolled = true;
+            const studentToEnroll = students.find((student) => student.id === Number(args.id))
+            studentToEnroll.enrolled = true
             return studentToEnroll
-        }
+        },
+    },
 
-    }
 }
-module.exports = { resolvers };
+
+
+module.exports = {
+    resolvers,
+}
