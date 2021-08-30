@@ -1,6 +1,6 @@
 const { ApolloServer } = require('apollo-server');
-const dbConnection = require('./config/dbConnection');
-const { resolvers } = require('./resolvers');
+const dbConnection = require('./src/config/dbConnection');
+const { resolvers } = require('./src/resolvers');
 const typeDefs = require('./typeDefs/schema');
 const PORT = process.env.PORT || 8000;
 const server = new ApolloServer({
