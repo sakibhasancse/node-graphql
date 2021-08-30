@@ -19,14 +19,14 @@ const typeDefs = gql`
     password: String!
   }
 
-  type RegisterInput {
+  input RegisterInput {
     fullName: String!
     email: String!
     password: String!
     confirmPassword: String!
   }
 
-  type loginInput{
+  input LoginInput{
       email: String!
       password: String!
   }

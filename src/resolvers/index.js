@@ -1,6 +1,6 @@
 
-const posts = require('./Posts/posts')
-const users = require('./users')
+const posts = require('./Posts/post')
+const users = require('./Users/user')
 
 module.exports = {
     Query: {
