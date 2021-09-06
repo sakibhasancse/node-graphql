@@ -9,6 +9,15 @@ module.exports = {
                     throw new Error(err);
                 })
 
+        },
+        async createPosts() {
+            await Post.find()
+                .then((res) => {
+                    return res
+                }).catch((err) => {
+                    throw new Error(err);
+                })
+
         }
     }
 }
