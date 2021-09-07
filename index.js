@@ -2,15 +2,18 @@ const { ApolloServer } = require('apollo-server');
 const dbConnection = require('./src/config/dbConnection');
 const resolvers = require('./src/resolvers');
 const typeDefs = require('./src/typeDefs');
-const dotenv = require('dotenv');
-dotenv.config();
+const { isAuthenticated } = require('./src/auth');
+require('dotenv').config();
+
 const server = new ApolloServer({
     resolvers: resolvers,
-    typeDefs: typeDefs
+    typeDefs: typeDefs,
+    context: ({ req }) => isAuthenticated(req),
+    introspection: true,
+    playground: true
 });
 
-const PORT = process.env.PORT || 8000;
-server.listen(PORT, () => {
-    dbConnection(process.env.DB_CONNECTION)
-    console.log('listening on port' + PORT);
+
+server.listen({ port: process.env.PORT || 8000 }).then(({ url }) => {
+    console.log(`🚀 Server ready at ${url}`);
 });
