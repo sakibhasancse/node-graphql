@@ -1,5 +1,6 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+
 const dbConnection = (url) => {
     return mongoose.connect(url, { useNewUrlParser: true })
 }
-module.exports = dbConnection;
+export default dbConnection;

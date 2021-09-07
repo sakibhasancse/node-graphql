@@ -1,12 +1,2 @@
-
-const posts = require('./Posts/post')
-const users = require('./Users/user')
-
-module.exports = {
-    Query: {
-        ...posts.Query,
-    },
-    Mutation: {
-        ...users.Mutation
-    }
-}
+import * as users from './users/user';
+import * as posts from './posts/post';

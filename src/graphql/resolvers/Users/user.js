@@ -1,11 +1,11 @@
-const { UserInputError } = require('apollo-server-errors');
-const User = require('../../../model/User');
-const { validationRegisterInput, validationLoginInput } = require('../../utils/validations');
-const { generateUserToken } = require('../Posts/auth');
-const bcrypt = require('bcryptjs');
+import { UserInputError } from 'apollo-server-errors';
+import User from '../../../model/User'
+import { validationRegisterInput, validationLoginInput } from '../../utils/validations'
+import { generateUserToken } from '../Posts/auth'
+import bcrypt from 'bcryptjs'
 
 
-module.exports = {
+export default {
     Mutation: {
         async loginUser(_, { loginInput: { email, password } }) {
             const { errors, valid } = validationLoginInput(email, password);

@@ -1,4 +1,5 @@
-const Post = require('./post.model');
+import Post from './post.model';
+
 module.exports = {
     Query: {
         async getPosts() {

@@ -1,0 +1,62 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add @babel/cli @babel/core @babel/node @babel/preset-env apollo-engine apollo-server-express body-parser cors dotenv express graphql graphql-compose graphql-compose-connection graphql-compose-mongoose graphql-middleware graphql-tools mongoose mongoose-bcrypt mongoose-timestamp
+
+PATH: 
+  /opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin:/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.17.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, open '/Users/amiar/Library/Caches/Yarn/v6/npm-apollo-engine-binary-darwin-0.2018.6-20-gc0e4bb519-1458cf9af9adff1248730b9e7ea3408a778ff20e-integrity/node_modules/apollo-engine-binary-darwin/.yarn-metadata.json'
+
+npm manifest: 
+  {
+    "name": "node-graphql",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "build": "babel src --out-dir dist",
+      "start": "node dist/server.js",
+      "dev": "nodemon --exec npx babel-node src/server.js",
+      "prettier": "prettier --config ./.prettierrc --write \"**/*.js\"",
+      "pretest": "eslint --ignore-path .gitignore .",
+      "postinstall": "rm -rf dist && yarn run build",
+      "lint": "yarn prettier --write --check --config ./.prettierrc \"**/*.js\" && eslint --fix ./src",
+      "release": "release-it patch --no-npm.publish"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/sakibhasancse/node-graphql.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/sakibhasancse/node-graphql/issues"
+    },
+    "homepage": "https://github.com/sakibhasancse/node-graphql#readme",
+    "dependencies": {
+      "apollo-server": "^3.1.2",
+      "bcryptjs": "^2.4.3",
+      "dotenv": "^10.0.0",
+      "graphql": "^15.5.1",
+      "jsonwebtoken": "^8.5.1",
+      "mongodb": "^4.1.1",
+      "mongoose": "^6.0.2",
+      "nodemon": "^2.0.12"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

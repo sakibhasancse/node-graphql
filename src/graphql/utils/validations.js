@@ -42,4 +42,4 @@ const validationLoginInput = ({ email, password }) => {
 
 }
 
-module.exports = { validationRegisterInput, validationLoginInput }
+export default { validationRegisterInput, validationLoginInput }
