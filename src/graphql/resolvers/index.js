@@ -1,2 +1,4 @@
-import * as users from './users/user';
-import * as posts from './posts/post';
+import  users from './users/user';
+import posts from './posts/post';
+
+export default { users, posts };
