@@ -1,4 +1,4 @@
-import users from './users';
-import posts from './posts'
+import users from './users.gql';
+import posts from './posts.gql';
 
 export default { users, posts }

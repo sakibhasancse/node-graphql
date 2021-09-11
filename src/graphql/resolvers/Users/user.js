@@ -1,7 +1,7 @@
 import { UserInputError } from 'apollo-server-errors';
-import User from '../../../model/User'
+import User from './user.model'
 import { validationRegisterInput, validationLoginInput } from '../../utils/validations'
-import { generateUserToken } from '../Posts/auth'
+import { generateUserToken } from '../../../auth'
 import bcrypt from 'bcryptjs'
 
 

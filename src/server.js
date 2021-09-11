@@ -1,7 +1,7 @@
 import { ApolloServer } from 'apollo-server';
-import dbConnection from './src/config/dbConnection';
-import resolvers from './src/resolvers';
-import typeDefs from './src/schema/typeDefs';
+// import dbConnection from './src/config/dbConnection';
+import resolvers from '../src/graphql/resolvers';
+import typeDefs from '../src/graphql/schema/typeDefs';
 import { isAuthenticated } from './src/auth';
 import dotenv from 'dotenv';
 dotenv.config();
